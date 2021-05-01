@@ -1,0 +1,10 @@
+{% extends "dataset_visual/layout.html" %}
+
+{% block fechas %}
+    <p>Tenga en cuenta que los datos consultados son: </p>    
+    <p> DE: {{dates.0}} A: {{dates.1}} </p>
+{% endblock %}
+
+{% block body %}
+    {{df | safe}}
+{% endblock %}
