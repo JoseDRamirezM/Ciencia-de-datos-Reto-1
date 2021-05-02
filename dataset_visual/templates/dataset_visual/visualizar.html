@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block consultas %}
+<a href= "{% url 'dataset_visual:index' %}">Volver al dataset</a>
 
 <form action="{% url 'dataset_visual:query' %}" method="post">
     {% csrf_token %}
@@ -38,11 +39,40 @@
     </div>
 </form>
 
-<form action="{% url 'dataset_visual:query_params' %}" method="post">
+<form action="{% url 'dataset_visual:query_params_1' %}" method="post">
     {% csrf_token %}
     <div class="form-group">
         Permite ver a los paises que viajaron las personas contagiadas por departamento
         <input class="form-control" type="text" name="departamento" onkeyup="this.value = this.value.toUpperCase();" required >
+        <input class="btn btn-primary" type="submit" value="Aplicar!">
+    </div>
+</form>
+
+<form action="{% url 'dataset_visual:query_params_2' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        Casos con tipo de contagio
+        <select name="tipo_contagio">
+            {% for item in tipo_contagio %}
+                <option>{{item}}</option>
+            {% endfor %}
+        </select>
+        en el departamento
+        <input class="form-control" type="text" name="departamento" onkeyup="this.value = this.value.toUpperCase();" required >
+        <input class="btn btn-primary" type="submit" value="Aplicar!">
+    </div>
+</form>
+
+<form action="{% url 'dataset_visual:query_params_3' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        Casos con tipo de contagio 
+        <select name="tipo_contagio">
+            {% for item in tipo_contagio %}
+                <option>{{item}}</option>
+            {% endfor %}
+        </select>
+        por departamento
         <input class="btn btn-primary" type="submit" value="Aplicar!">
     </div>
 </form>
