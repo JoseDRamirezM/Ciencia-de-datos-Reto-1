@@ -15,7 +15,7 @@
 <form action="{% url 'dataset_visual:query' %}" method="post">
     {% csrf_token %}
     <div class="form-group">
-        Permite ver la cantidad de casos leves, graves y difuntos 
+        Permite ver la cantidad de casos leves y difuntos 
         <input class="form-control" type="hidden" name="query_type" value="query_estado_general" >
         <input class="btn btn-primary" type="submit" value="Aplicar!">
     </div>
@@ -24,7 +24,7 @@
 <form action="{% url 'dataset_visual:query' %}" method="post">
     {% csrf_token %}
     <div class="form-group">
-        Permite ver la cantidad general de casos leves, graves y difuntos por departamento 
+        Permite ver la cantidad general de casos leves y difuntos por departamento 
         <input class="form-control" type="hidden" name="query_type" value="query_estado_por_departamento" >
         <input class="btn btn-primary" type="submit" value="Aplicar!">
     </div>
@@ -42,7 +42,7 @@
 <form action="{% url 'dataset_visual:query_params_1' %}" method="post">
     {% csrf_token %}
     <div class="form-group">
-        Permite ver a los paises que viajaron las personas contagiadas por departamento
+        Permite ver el estado de los contagiados en el departamento
         <input class="form-control" type="text" name="departamento" onkeyup="this.value = this.value.toUpperCase();" required >
         <input class="btn btn-primary" type="submit" value="Aplicar!">
     </div>
