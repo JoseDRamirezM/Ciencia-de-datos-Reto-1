@@ -1,10 +1,8 @@
 import pandas as pd
 import numpy as np
 
-
 url = 'https://www.datos.gov.co/resource/gt2j-8ykr.json?$limit=2000'
 df = pd.read_json(url)
-
 
 def df_to_html(df):
     return df.to_html()
@@ -51,3 +49,5 @@ def query_tipo_de_contagio_en_departamento(tipo_contagio, departamento):
 def query_tipo_de_contagio_por_departamento(tipo_contagio):
     return df_to_html(df[df['fuente_tipo_contagio'] == tipo_contagio].groupby(['departamento_nom'])[
         'fuente_tipo_contagio'].count().to_frame())
+
+ 

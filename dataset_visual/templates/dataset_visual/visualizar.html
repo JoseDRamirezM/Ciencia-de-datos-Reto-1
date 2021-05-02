@@ -1,16 +1,19 @@
 {% extends "dataset_visual/layout.html" %}
 
 {% block fechas %}
-    <p>Tenga en cuenta que los datos consultados son: </p>    
-    <p> DE: {{dates.0}} A: {{dates.1}} </p>
+    <h3>Tenga en cuenta que los datos consultados son: </h3>    
+    <h3> DEL: {{dates.0}} AL: {{dates.1}} </h3>
 {% endblock %}
 
 {% block body %}
     {{df | safe}}
 {% endblock %}
 
+{% block volver %}
+    <a href= "{% url 'dataset_visual:index' %}">Volver al dataset</a>
+{% endblock %}
+
 {% block consultas %}
-<a href= "{% url 'dataset_visual:index' %}">Volver al dataset</a>
 
 <form action="{% url 'dataset_visual:query' %}" method="post">
     {% csrf_token %}

@@ -1,0 +1,132 @@
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul,
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+html,
+body {
+  margin: 0 auto;
+}
+
+html td{
+  color:black
+}
+
+header {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  padding-top: 12px;
+  background-color: #3b6978;
+  margin: 0;
+}
+
+div#inicio {
+  margin: auto;
+  width: 960px;
+  color: white;
+}
+
+div#principal {
+  position: relative;
+  margin: auto;
+  width: 960px;
+  height: 415px;
+  border-bottom: solid 5px #3b6978;
+  bottom: 150px;
+}
+
+hr {
+  border: 0 none #e7dfd5;
+  border-top: 3px solid #e7dfd5;
+  height: 1px;
+  margin: 5px 0;
+  display: block;
+  clear: both;
+}
+div#info {
+  height: 310px;
+  padding: 15px;
+  background-color: #84a9ac;
+}
+
+.btn-primary{
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  border: 4px solid black;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  float: right;
+}
+
+a:hover,.btn-primary:hover {
+  background: no-repeat 0 5px;
+  outline: 0;
+  border: none;
+}
+
+strong {
+  color: black;
+}
+
+select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 30px;
+  padding: 5px;
+}
+select:focus{ outline: none;}
+
+div#tabla {
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+  width: 1200px;
+  height: 1400px;
+  border-bottom: solid 5px #3b6978;
+  bottom: 150px;
+  overflow : scroll;
+  text-align: -webkit-center;
+}
+
+table{
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: #fff;
+  border: 4px solid black;
+  border-radius: .4em;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3b6978;
+  color: white;
+}

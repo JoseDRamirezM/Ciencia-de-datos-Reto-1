@@ -10,4 +10,4 @@ urlpatterns = [
     path("query_params_1", views.query_params_1, name="query_params_1"),
     path("query_params_2", views.query_params_2, name="query_params_2"),
     path("query_params_3", views.query_params_3, name="query_params_3"),
-]
+
