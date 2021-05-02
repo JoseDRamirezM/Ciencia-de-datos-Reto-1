@@ -6,33 +6,31 @@
 		<link rel="stylesheet" href="{% static 'estilo.css'%}"/>
     </head>
     <body>
-		<header>
-			<div id="inicio">
-				<h1>Introducción a la ciencia de datos</h1>
-				<div>
-					{% block fechas %}
-					{% endblock %}
-				</div>
-			</div>
-		</header>
-		<div id="principal">
-			<div id="info">
-			<h1>Consultas</strong></h1>
-			<hr>
-				<ul>
-					{% block consultas %}
-					{% endblock %}
-				</ul>
-			</div>
-			<p/>
-			{% block volver %}
-			{% endblock %}
-		</div>
-		<div id="tabla" class="container">
-			
-			{% block body %}
-			{% endblock %}
-		</div>
-		
+      <header>
+        <div id="inicio">
+          <h1>Introducción a la ciencia de datos</h1>
+          <div>
+            {% block fechas %}
+            {% endblock %}
+          </div>
+        </div>
+      </header>
+      <div id="principal">
+        <div id="info">
+        <h1>Consultas</strong></h1>
+        <hr>
+          <ul>
+            {% block consultas %}
+            {% endblock %}
+          </ul>
+        </div>
+        <p/>
+        {% block volver %}
+        {% endblock %}
+      </div>
+      <div id="tabla" class="container">
+        {% block body %}
+        {% endblock %}
+      </div>
     </body>
 </html>

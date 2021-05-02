@@ -66,3 +66,4 @@ def query_params_3(request):
                                                                   'tipo_contagio': util.get_tipo_contagio()})
     else:
         return index(request)
+
