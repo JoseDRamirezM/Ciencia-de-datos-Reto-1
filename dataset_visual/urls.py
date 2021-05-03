@@ -11,3 +11,4 @@ urlpatterns = [
     path("query_params_2", views.query_params_2, name="query_params_2"),
     path("query_params_3", views.query_params_3, name="query_params_3"),
 
+]
